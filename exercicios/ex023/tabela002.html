@@ -13,6 +13,14 @@
         table {
             border-collapse: collapse;
             width: 500px;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th {
@@ -21,9 +29,23 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(odd) { /*2n - 1*/
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even){ /* 2n */
+            background-color: lightgray;
+        }  
 
         .num {
             text-align: right;
@@ -33,10 +55,11 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -151,10 +174,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num">213 317 639</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit, id facere excepturi maxime quae doloribus vitae molestiae adipisci. Asperiores veritatis saepe maiores, laboriosam corporis explicabo vel quae aut ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium temporibus optio debitis, sit culpa saepe hic dignissimos voluptatum laborum deserunt cupiditate totam nam labore magnam sint repudiandae laboriosam facere quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, temporibus provident distinctio, molestiae atque voluptatibus rerum, possimus hic sequi consectetur ullam numquam veniam blanditiis est voluptas minus reiciendis dolor accusamus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae eos maxime atque dignissimos earum minus voluptatibus sequi, natus cumque totam enim provident? Eveniet quas consequatur provident eos aperiam voluptatum.</p>
 </body>
 </html>
